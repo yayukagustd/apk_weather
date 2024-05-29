@@ -1,0 +1,183 @@
+.weather-container {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('/public/bg4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4em; 
+  margin-bottom: 20px; 
+}
+
+.date-time {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.feels {
+  font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.feels .label {
+  font-size: 0.6em;
+}
+
+.icon {
+  margin: 20px 0;
+  font-size: 3em ;
+}
+
+.weather-details {
+  font-size: 1.2em;
+  margin: 20px 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+.weather-details .label {
+  font-weight: bold;
+}
+
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 1.5em; 
+  margin: 20px 0;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.clock-section {
+  padding: 0 5px; 
+}
+
+button#refreshWeatherData {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+button#refreshWeatherData:hover {
+  background-color: #555;
+}
+
+/* New CSS for the weather forecast section */
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  margin: 0 5px;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+}
+
+.forecast-day .day {
+  font-weight: bold;
+}
+
+.forecast-day .temperature {
+  font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .weather-container {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .weather-container {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+  }
+
+  .clock-container {
+    width: 150px; 
+    height: 150px; 
+    font-size: 1.5em; 
+  }
+
+  .feels {
+    position: static;
+    text-align: center;
+  }
+
+  .weather-details {
+    position: static;
+    text-align: center;
+  }
+
+  button#refreshWeatherData {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .forecast-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast-day {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
